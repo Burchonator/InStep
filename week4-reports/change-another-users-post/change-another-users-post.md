@@ -1,12 +1,14 @@
-# Edit the posts of other users via edit post page
+# Edit the posts of other users via request forgery on the edit post page
 
 **Summary:**
 
-Users can edit posts on other user accounts without being logged into the other user account.
+Users can edit posts on other user accounts without being logged into the other user account via request forgery.
 
 **Description:**
 
-Users can edit the posts of other users by changing the id in the edit post form to a different post that exists. The user clicks edit on their post and they go to the form to where they use developer tools to inspect the form to edit the post and change the post id to the post id of another user's post. When they click save post they change the contents of the other user's post.
+- Request forgery is where a request is forged to perform actions that weren't originally intended.
+- Users can edit the posts of other users by changing the id in the edit post form to a different post that exists. The user clicks edit on their post and they go to the form to where they use developer tools to inspect the form to edit the post and change the post id to the post id of another user's post. When they click save post they change the contents of the other user's post.
+
 
 Affected URL: https://26ff9ec30b121a410d3de36fcd980cd1.ctf.hacker101.com/index.php?page=edit.php&id=4
 

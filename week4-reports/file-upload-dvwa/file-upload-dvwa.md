@@ -1,12 +1,13 @@
-# File upload vulnerability and file inclusion leads to reverse shell
+# Malicious file upload vulnerability and file inclusion leads to reverse shell
 
 **Summary:**
 
-File upload vulnerability with directory traversal to start a reverse shell.
+Malicious file upload vulnerability with directory traversal to start a reverse shell.
 
 **Description:**
 
-PHP code can be uploaded via file upload with the use of exiftool or burp suite. Then the user can use a file inclusion / directory traversal to run the php script to get access to a reverse shell which they can use to escalate their privileges.
+- Malicious file uploads occur when files are uploaded to the filesystem by the user and the name, type, content and size of the file are not sufficiently validated. This leads to dangerous files being uploaded to the server.
+- PHP code can be uploaded via file upload with the use of exiftool or burp suite. Then the user can use a file inclusion / directory traversal to run the php script to get access to a reverse shell which they can use to escalate their privileges.
 
 Affected URLs and affected objects: 
 - http://localhost/DVWA/vulnerabilities/upload/ the file upload form upload the payload

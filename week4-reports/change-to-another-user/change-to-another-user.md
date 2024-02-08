@@ -1,12 +1,13 @@
-# Access accounts of other users by changing the id cookie
+# Horizontal privilege escalation allows users to access other accounts by changing their id cookie
 
 **Summary:**
 
-Users can become the admin or another user's account by changing their id cookie.
+Horizontal privilege escalation allows users to access the admin account and another user's account by changing their id cookie.
 
 **Description:**
 
-User's can become another account when they change the value of their id cookie with the hash of another user's id. If a user knows the id of another user that they want to gain access to, they only need to hash the id and change their id cookie with the hashed id. The user can create posts and delete posts as if they are that user.
+- Horizontal privilege escalation involves gaining the right of another user account with similar privileges. The accounts that were accessed had the same privileges as my user account. If there were more privileges with the admin account this would be a case of vertical privilege escalation.
+- User's can become another account when they change the value of their id cookie with the hash of another user's id. If a user knows the id of another user that they want to gain access to, they only need to hash the id and change their id cookie with the hashed id. The user can create posts and delete posts as if they are that user.
 
 Affected object: id cookies. 
 
