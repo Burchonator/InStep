@@ -90,4 +90,4 @@ User's can find the usernames and passwords of other user's without being limite
 - Error messages for an incorrect username or password must show the same error if either the username or password is incorrect. There must not be separate messages for the username or password being incorrect. For example, "Username/password is incorrect" is a valid error message. This prevents users from enumerating usernames of other user's.
 - Limit the number of attempts users can make when logging into an account, and temporarily ban IP addresses that exceed the number of attempts.
 - Rate limit the number of requests that are sent at once to prevent multiple login attempts.
-- Make the url of the admin page harder to guess.
+- Make the url of the admin login page harder to guess than /login. Use something like admin-login-y12431.

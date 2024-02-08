@@ -112,6 +112,18 @@ GitHub: https://github.com/marcocesarato/PHP-Antimalware-Scanner
 
 Mitigation 2
 
-Make sure that no special characters are allowed in the file inclusion path. For example, '|' should not have been accepted, and any ../ even if they are encoded, they should not be allowed. 
+Make sure that no special characters are not allowed in the file inclusion path. For example, '|' should not have been accepted, and any ../ even if they are encoded, they should not be allowed. 
 
 Make an if statement with the filenames that you expect the user to input. You can go through a list of predetermined values and if the user input matches the filename then the resource can be used. Otherwise, all other requests are dropped. Users should only be allowed to view what they are expected to view.
+
+Mitigation 3
+
+For the file upload
+- Ensure Upload Files Cannot Be Executed
+- Rename Files on Upload
+- Validate File Formats and Extensions
+- Validate the Content-Type Header
+- Use a Virus Scanner
+
+For the file inclusion
+- You can hard code the files that are only allowed to be accessed by the user. Everything else is not permitted. You could make a list of valid inputs and if the user’s input doesn’t match any of the values in the list they won’t be permitted access.

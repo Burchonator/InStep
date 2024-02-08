@@ -88,3 +88,5 @@ You will find the whole database is revealed containing usernames and the passwo
 **Recommended Mitigation**
 
 - Remove all special characters including quotes and any comments that could be run in SQL. This can be done with the htmlspecialchars() php function.
+- Make sure that if a numeric value is expected that only a numeric value can be accepted. Use conditions with functions such as: 
+if(is_numeric( $id )) { $id = intval($id); {Your query code with (:id) and is returned as output}}
